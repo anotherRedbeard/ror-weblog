@@ -22,4 +22,7 @@ test:
 
 production:
   <<: *default
-  database: ruby_blog_prod
+  host: <%= ENV['DB_HOST'] %>
+  database: <%= ENV['DB_DATABASE'] %>
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
